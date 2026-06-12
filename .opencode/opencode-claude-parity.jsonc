@@ -1,0 +1,6 @@
+{
+  // Enable real implementations for agents, skills, review, research
+  "experimental": {
+    "useRealImplementations": true
+  }
+}
