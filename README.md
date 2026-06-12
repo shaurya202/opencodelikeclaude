@@ -1,4 +1,4 @@
-# opencode-claude-parity
+# opencodelikeclaude
 
 OpenCode plugin providing Claude Code parity: hooks, slash commands, agents, MCP servers, skills, sessions, permissions, and more.
 
@@ -88,6 +88,4 @@ npm run lint
 npm run test
 ```
 
-## License
 
-MIT
