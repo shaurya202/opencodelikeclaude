@@ -1,0 +1,4 @@
+node_modules/
+.env
+.opencode/sessions/
+.opencode/node_modules/

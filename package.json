@@ -1,0 +1,67 @@
+{
+  "name": "opencode-claude-parity",
+  "version": "1.0.0",
+  "description": "OpenCode plugin for Claude Code parity - slash commands, hooks, agents, MCP, skills, sessions, permissions, and more",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "opencode-claude-parity": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "migrate": "node dist/cli.js migrate"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "claude-code",
+    "hooks",
+    "commands",
+    "agents",
+    "mcp",
+    "skills",
+    "sessions",
+    "permissions",
+    "ai"
+  ],
+  "author": "OpenCode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opencode/opencode-claude-parity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opencode/opencode-claude-parity/issues"
+  },
+  "homepage": "https://github.com/opencode/opencode-claude-parity#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "CONFIG_REFERENCE.md",
+    "COMMAND_REFERENCE.md",
+    "MIGRATION_GUIDE.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "uuid": "^14.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
