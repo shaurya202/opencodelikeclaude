@@ -8,6 +8,7 @@
 | `npm run lint` | Lint (`eslint src --ext .ts`) |
 | `npm run test` | Test once (`vitest run`) |
 | `npm run test:watch` | Watch tests (`vitest`) |
+| `npm run migrate` | Run CLI migration (`node dist/cli.js migrate`) |
 
 CI: `lint -> build -> test` (`npm ci && npm run lint && npm run build && npm test`).  
 Publish: `npm ci && npm run lint && npm test && npm run build && npm publish --provenance --access public` (tag `v*`).
@@ -41,6 +42,8 @@ Validated with Zod, deep merged with defaults. TTL cache (5s).
 - **Modules**: All under `src/` with 1:1 mapping to `dist/`; no barrel-index pattern — imports are per-directory
 
 ## Environment Variables
+Copy `.env.example` to `.env` (`.env` is gitignored).
+- `NVIDIA_NIM_API_KEY` — required for `useRealImplementations` (agents, skills, review, research)
 - `OPENCODE_LOG_LEVEL` — debug, info, warn, error, silent
 - `EXA_API_KEY` — websearch MCP
 - `GITHUB_TOKEN` — grepApp MCP
